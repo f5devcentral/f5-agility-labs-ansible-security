@@ -7,4 +7,4 @@ In this Section we will verify the Lab functionality and availability.
    :maxdepth: 1
    :glob:
 
-   lab*
+   prereqs*
