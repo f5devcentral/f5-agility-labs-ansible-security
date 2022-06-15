@@ -1,5 +1,5 @@
-Module 4: Event Driven Security Automation
-==========================================
+Module 2: Running Attacks
+=========================
 
 Here we'll start with the basics of platform setup, editing, and building.
 
@@ -7,4 +7,4 @@ Here we'll start with the basics of platform setup, editing, and building.
    :maxdepth: 1
    :glob:
 
-   lab*
+   attacks*

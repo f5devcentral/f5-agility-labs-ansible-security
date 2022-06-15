@@ -1,7 +1,7 @@
 Module 1: Verify Lab Functionality
 ==================================
 
-Here we'll start with the basics of platform setup, editing, and building.
+In this Section we will verify the Lab functionality and availability.
 
 .. toctree::
    :maxdepth: 1
