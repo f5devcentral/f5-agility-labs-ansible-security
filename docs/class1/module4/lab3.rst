@@ -9,6 +9,7 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
      .. image:: ../images/Event/Picture9.png
 #. Install Logstash
      In the Node 1 Web Shell run the following command
+
      .. code-block::
 
        sudo /usr/share/logstash/bin/logstash-plugin install logstash-output-exec
@@ -26,12 +27,10 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
      .. code-block::
 
        sudo nano /etc/logstash/conf.d/logstash.conf
-#. Add the following HTTP code (in yellow) to the input section to match below (copy yellow code and paste into web shell by holding <SHIFT> and pressing <INSERT>)
-     In the Node 1 Web Shell inject the yellow code only
+#. Add the following HTTP code to the input section to match below, to paste into web shell by holding <SHIFT> and pressing <INSERT>
      
      .. code-block::
-        :emphasize-lines: 11,12,13,14
-
+  
         input {
                   tcp {
                            port => 5001
@@ -47,9 +46,49 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
                            type => "watcher-1"
                       }
              }
-#. Install Nano
-     In the Node 1 Web Shell
+
+#. Add the bottom IF statement (watcher-1) code to the output section to match below, to paste into web shell by holding <SHIFT> and pressing <INSERT>)
      
      .. code-block::
 
-       sudo rpm -ihv https://vault.centos.org/centos/8/BaseOS/x86_64/os/Packages/nano-2.9.8-1.el8.x86_64.rpm 
+        output {
+            if [type] == "awaf" {
+                elasticsearch {
+                        hosts => ["127.0.0.1:9200"]
+                        index => "awaf-%{+YYYY.MM.dd}"
+                        user => "elastic"
+                        password => "password"
+                }
+            } 
+            if [type] == "ipfix-f5" {
+                elasticsearch {
+                        hosts => ["127.0.0.1:9200"]
+                        index => "ipfix-%{+YYYY.MM.dd}"
+                        user => "elastic"
+                        password => "password"
+                }
+            }
+            if [type] == "watcher-1" {
+                exec {
+                        command => "/usr/local/bin/ansible-playbook /home/centos/sample-playbook/awaf-blocking.yaml"
+                }
+            }
+        }
+#. Save the file and close the editor (**CTRL + X**) and press **Y** to save then press the **Enter** key
+     
+     .. image:: ../images/Event/Picture11.png
+#. Stop the Logstash service to apply the changes
+     
+     .. code-block::
+
+          sudo systemctl stop logstash
+     
+     .. image:: ../images/Event/Picture12.png
+#. Start the Logstash service with the updated configuration file (can take up to 60 seconds for output to appear)
+     Wait until you see UDP Listener Started
+     
+     .. code-block::
+          
+          sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf &
+
+     .. image:: ../images/Event/Picture13.png
