@@ -6,7 +6,7 @@ Watcher is an Elasticsearch feature that you can use to create actions based on 
 #. Configure Elastic Watcher (in the Stack Management Menus -> Alerts and Insights -> Watcher)
 
      .. image:: ../images/Event/Picture5.png
-      :width: 750
+      :width: 850
 #. Click Create -> Create Advanced Watch
 
      .. image:: ../images/Event/Picture6.png

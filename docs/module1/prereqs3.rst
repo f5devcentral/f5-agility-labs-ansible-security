@@ -22,11 +22,11 @@ Kibana is a free and open frontend application that sits on top of the Elastic S
 #. Select the Hunting Dashboard
 
      .. image:: ../images/Prereqs/Picture8.png
-          :width: 700
+          :width: 850
 #. If working correctly should see something similar to below (if Source IP addresses is 0 check BIG-IP License)  
 
      .. image:: ../images/Prereqs/Picture9.png
-          :width: 700
+          :width: 850
 
 .. note:: 
    - IF the BIG-IP isn’t Activated then the lab will not work and be able to be completed.

@@ -22,7 +22,7 @@ Damn Vulnerable Web App (DVWA) is a PHP/MySQL web application that is damn vulne
           :width: 500
 #. Verify that the DVWA Webpage appears appropriately  
      .. image:: ../images/Prereqs/Picture14.png
-          :width: 800        
+          :width: 850        
 
 .. note:: 
    - We will not log into this page at this time as the user ID and Password are not known yet

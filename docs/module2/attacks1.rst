@@ -25,8 +25,8 @@ In cryptography, a brute-force attack consists of an attacker submitting many pa
      -  Password: password
 
      .. image:: ../images/Attacks/Picture4.png
-          :width: 700
+          :width: 850
 #. DVWA Website once logged in should look like below
 
      .. image:: ../images/Attacks/Picture5.png
-          :width: 700
+          :width: 850

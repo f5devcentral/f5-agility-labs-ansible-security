@@ -9,11 +9,11 @@ Enabling the Evaluation license opens up the ability to do Event Driven automati
           :width: 600
 
      .. image:: ../images/Event/Picture2.png
-          :width: 700
+          :width: 850
 #. Click on the Start Trial button to enable 30-Day Trial
       
      .. image:: ../images/Event/Picture3.png
           :width: 600
 
      .. image:: ../images/Event/Picture4.png
-          :width: 700
+          :width: 850
