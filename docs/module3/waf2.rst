@@ -13,6 +13,7 @@ Ansible is an opensource IT automation engine that automates provisioning, confi
        cd /git/sample-playbook
 
      .. image:: ../images/WAF/Picture5.png
+          :width: 600
 #. Run the Ansible Playbook to change the WAF Policy to Blocking
 
      .. code-block::
@@ -20,7 +21,8 @@ Ansible is an opensource IT automation engine that automates provisioning, confi
        ansible-playbook awaf-blocking.yaml
       
      .. image:: ../images/WAF/Picture6.png
+          :width: 850
 #. On the BIG-IP Validate that the enforcement mode changed from Transparent to Blocking (Refresh the page by clicking Policies List) Validate on the Notice that the WAF-Policy enforcement mode is “Transparent” this means it is not actively blocking any of the attacks however it is logging them.
 
      .. image:: ../images/WAF/Picture7.png
-     .. image:: ../images/WAF/Picture8.png
+          :width: 850

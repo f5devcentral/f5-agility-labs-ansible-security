@@ -10,15 +10,16 @@ The goal of this section is to emulate an attack using the nikto command, this w
        nikto -host 10.1.50.100
 
      .. image:: ../images/Event/Picture14.png
+          :width: 850
 #. Examine the Watcher on the Kibana (this could take up-to 5 minutes before it fires)
 
      .. image:: ../images/Event/Picture15.png
+          :width: 850
 #. If the code has correctly run what you should see in the F5 now is that it automatically changed from Transparent to Blocking by launching the ansible code via the Watcher and Logstash.
      In the F5 TMUI Security Policy List  
      
      .. image:: ../images/Event/Picture16.png
-
-     .. image:: ../images/Event/Picture17.png
+          :width: 850
 #. Re-Run the Code on the KALI Web Shell run the following command
      Note the second run of the code cannot see all of the vulnerabilities that it saw before, this is because the F5 AWAF is now Blocking that bad traffic.
 
@@ -26,4 +27,5 @@ The goal of this section is to emulate an attack using the nikto command, this w
 
        nikto -host 10.1.50.100
 
-     .. image:: ../images/Event/Picture18.png
+     .. image:: ../images/Event/Picture17.png
+          :width: 850

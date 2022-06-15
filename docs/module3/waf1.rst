@@ -8,9 +8,12 @@ F5 Advanced WAF employs countermeasures to detect and stop evolving application 
      - password: admin123
 
      .. image:: ../images/WAF/Picture1.png
+          :width: 400
 #. In the Main Menus -> Security -> Click on Application Security
       
      .. image:: ../images/WAF/Picture2.png
+          :width: 300
 #. Notice that the WAF-Policy enforcement mode is “Transparent” this means it is not actively blocking any of the attacks however it is logging them.
       
      .. image:: ../images/WAF/Picture3.png
+          :width: 850

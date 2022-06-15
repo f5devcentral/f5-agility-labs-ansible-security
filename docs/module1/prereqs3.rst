@@ -7,21 +7,26 @@ Kibana is a free and open frontend application that sits on top of the Elastic S
      In UDF -> Ansible Security Lab -> Components -> Node 1 -> Access -> Kibana
 
      .. image:: ../images/Prereqs/Picture5.png
+          :width: 500
 #. Login to Kibana Webpage
      -  Username: elastic
      -  Password: password
 
      .. image:: ../images/Prereqs/Picture6.png
+          :width: 500
 #. Check the Kibana Dashboard
      Click on the Triple Horizontal lines in the top left corner -> Analytics -> Click on Dashboard
 
      .. image:: ../images/Prereqs/Picture7.png
+          :width: 500
 #. Select the Hunting Dashboard
 
      .. image:: ../images/Prereqs/Picture8.png
+          :width: 850
 #. If working correctly should see something similar to below (if Source IP addresses is 0 check BIG-IP License)  
+
      .. image:: ../images/Prereqs/Picture9.png
-        
+          :width: 850
 
 .. note:: 
    - IF the BIG-IP isn’t Activated then the lab will not work and be able to be completed.
