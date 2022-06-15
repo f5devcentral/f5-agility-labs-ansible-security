@@ -30,22 +30,22 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
      In the Node 1 Web Shell inject the yellow code only
      
      .. code-block::
-        :emphasize-lines: 11, 12, 13, 14
+        :emphasize-lines: 11,12,13,14
 
-       input {
-                tcp {
-                         port => 5001
-                         type => awaf
-                    }
-                udp {
-                         port => 5002
-                         type => "ipfix-f5"
-                         codec => netflow
-                    }
-               http {
-                         port => 9001
-                         type => "watcher-1"
-                    }
+        input {
+                  tcp {
+                           port => 5001
+                           type => awaf
+                      }
+                  udp {
+                           port => 5002
+                           type => "ipfix-f5"
+                           codec => netflow
+                      }
+                 http {
+                           port => 9001
+                           type => "watcher-1"
+                      }
              }
 #. Install Nano
      In the Node 1 Web Shell
