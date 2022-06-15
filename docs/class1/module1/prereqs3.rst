@@ -1,8 +1,6 @@
-Validate Lab Functionality
-==========================
-
 Verify Kibana
-*************
+=============
+
 Kibana is a free and open frontend application that sits on top of the Elastic Stack, providing search and data visualization capabilities for data indexed in Elasticsearch. Kibana also acts as the user interface for monitoring, managing, and securing an Elastic Stack cluster — as well as the centralized hub for built-in solutions developed on the Elastic Stack.
 
 #. Access Kibana through UDF Lab (Node 1)

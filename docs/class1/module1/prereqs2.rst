@@ -1,8 +1,6 @@
-Validate Lab Functionality
-==========================
-
 License F5
-********** 
+==========
+ 
 Ensure that the F5 is licensed, login to the F5 
 
 #. Access BIG-IP through UDF Lab
