@@ -29,7 +29,7 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
      .. code-block::
 
        sudo nano /etc/logstash/conf.d/logstash.conf
-#. Add the following HTTP code to the input section to match below, to paste into web shell by holding <SHIFT> and pressing <INSERT>
+#. Add the following HTTP code to the input section to match the picture below.
 
      .. code-block::
 
@@ -37,12 +37,10 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
                            port => 9001
                            type => "watcher-1"
                       }
-
-     .. code-block::
   
      .. image:: ../images/Event/Output1.png
-          :width: 850
-#. Add the bottom IF statement (watcher-1) code to the output section to match below, to paste into web shell by holding <SHIFT> and pressing <INSERT>)
+          :width: 650
+#. Add the bottom IF statement (watcher-1) code to the output section to match the picture in Yellow.
      
      .. code-block::
 
