@@ -1,5 +1,5 @@
-Module 1: Verify Lab Functionality
-==================================
+Module 4: Event Driven Security Automation
+==========================================
 
 Here we'll start with the basics of platform setup, editing, and building.
 
