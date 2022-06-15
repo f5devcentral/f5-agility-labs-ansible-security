@@ -29,53 +29,29 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
      .. code-block::
 
        sudo nano /etc/logstash/conf.d/logstash.conf
-#. Add the following HTTP code to the input section to match below, to paste into web shell by holding <SHIFT> and pressing <INSERT>
-     
-     .. code-block::
-  
-        input {
-                  tcp {
-                           port => 5001
-                           type => awaf
-                      }
-                  udp {
-                           port => 5002
-                           type => "ipfix-f5"
-                           codec => netflow
-                      }
-                 http {
-                           port => 9001
-                           type => "watcher-1"
-                      }
-             }
+#. Add the following HTTP code to the input section to match the picture below.
 
-#. Add the bottom IF statement (watcher-1) code to the output section to match below, to paste into web shell by holding <SHIFT> and pressing <INSERT>)
-     
      .. code-block::
 
-        output {
-            if [type] == "awaf" {
-                elasticsearch {
-                        hosts => ["127.0.0.1:9200"]
-                        index => "awaf-%{+YYYY.MM.dd}"
-                        user => "elastic"
-                        password => "password"
-                }
-            } 
-            if [type] == "ipfix-f5" {
-                elasticsearch {
-                        hosts => ["127.0.0.1:9200"]
-                        index => "ipfix-%{+YYYY.MM.dd}"
-                        user => "elastic"
-                        password => "password"
-                }
+       http {
+                port => 9001
+                type => "watcher-1"
             }
+  
+     .. image:: ../images/Event/Output1.png
+          :width: 650
+#. Add the bottom IF statement (watcher-1) code to the output section to match the picture in Yellow.
+     
+     .. code-block::
+
             if [type] == "watcher-1" {
                 exec {
                         command => "/usr/local/bin/ansible-playbook /home/centos/sample-playbook/awaf-blocking.yaml"
                 }
             }
-        }
+
+     .. image:: ../images/Event/Output2.png
+          :width: 850
 #. Save the file and close the editor (**CTRL + X**) and press **Y** to save then press the **Enter** key
      
      .. image:: ../images/Event/Picture11.png

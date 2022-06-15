@@ -52,6 +52,7 @@ A reverse shell is a shell session established on a connection that is initiated
      .. code-block::
 
        cd /home/kali
+       ls
        rm Sample-DB.zip
        nc -l -p 8888 > Sample-DB.zip
 
