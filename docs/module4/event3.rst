@@ -33,10 +33,10 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
 
      .. code-block::
 
-                 http {
-                           port => 9001
-                           type => "watcher-1"
-                      }
+       http {
+                port => 9001
+                type => "watcher-1"
+            }
   
      .. image:: ../images/Event/Output1.png
           :width: 650
