@@ -1,7 +1,7 @@
 Module 2: Running Attacks
 =========================
 
-Here we'll start with the basics of platform setup, editing, and building.
+In this Module we will be emulating and running attacks to validate vulnerabilities in the website.
 
 .. toctree::
    :maxdepth: 1
