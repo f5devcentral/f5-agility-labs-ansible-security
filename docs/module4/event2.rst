@@ -6,12 +6,15 @@ Watcher is an Elasticsearch feature that you can use to create actions based on 
 #. Configure Elastic Watcher (in the Stack Management Menus -> Alerts and Insights -> Watcher)
 
      .. image:: ../images/Event/Picture5.png
+      :width: 750
 #. Click Create -> Create Advanced Watch
 
      .. image:: ../images/Event/Picture6.png
+      :width: 400
 #. Enter a name and paste JSON code from black text box (Next Page) into “Watch JSON” replacing all data then click “Create Watch” at the bottom.
 
      .. image:: ../images/Event/Picture7.png
+      :width: 400
 
      .. code-block::
 
@@ -95,3 +98,4 @@ Watcher is an Elasticsearch feature that you can use to create actions based on 
 #. Ensure that the Watcher state is OK
 
      .. image:: ../images/Event/Picture8.png
+      :width: 850

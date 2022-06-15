@@ -7,6 +7,7 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
      In UDF -> Ansible Security Lab -> Components -> Node 1 -> Access -> Web Shell
 
      .. image:: ../images/Event/Picture9.png
+          :width: 400
 #. Install Logstash
      In the Node 1 Web Shell run the following command
 
@@ -15,6 +16,7 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
        sudo /usr/share/logstash/bin/logstash-plugin install logstash-output-exec
 
      .. image:: ../images/Event/Picture10.png
+          :width: 850
 #. Install Nano
      In the Node 1 Web Shell run the following command 
      
@@ -77,6 +79,7 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
 #. Save the file and close the editor (**CTRL + X**) and press **Y** to save then press the **Enter** key
      
      .. image:: ../images/Event/Picture11.png
+          :width: 600
 #. Stop the Logstash service to apply the changes
      
      .. code-block::
@@ -84,6 +87,7 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
           sudo systemctl stop logstash
      
      .. image:: ../images/Event/Picture12.png
+          :width: 600
 #. Start the Logstash service with the updated configuration file (can take up to 60 seconds for output to appear)
      Wait until you see UDP Listener Started
      
@@ -92,3 +96,4 @@ Logstash is a light-weight, open-source, server-side data processing pipeline th
           sudo /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf &
 
      .. image:: ../images/Event/Picture13.png
+          :width: 850
