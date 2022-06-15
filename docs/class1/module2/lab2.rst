@@ -47,7 +47,6 @@ Command injection is an attack in which the goal is execution of arbitrary comma
 #. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
      in the Kali Linux Web Shell the previous command should be completed and a new command line will be available verify size of file exfiltrated using command
 
-
      .. code-block::
 
        ls -AlFh
