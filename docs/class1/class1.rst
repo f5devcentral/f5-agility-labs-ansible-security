@@ -1,11 +1,13 @@
-Class 1: Getting Started
-========================
+Overview
+========
 
-This class has one module and two labs. We're simply doing this to show the
-standard structure of a class/module/lab.
+Demonstrating Ansible Security Automation with F5 LTM + WAF
+***********************************************************
 
-.. note:: It could be simplier to throw all the content in one file but that
-   would miss the point of showing how we curently use RST.
+This Lab will go over the benefits of using F5 Advanced Web Application Firewall (AWAF) by providing scenarios of injection-based attacks and ways to solve by using Ansible Automation and ELK Monitoring.  
+The Diagram above shows how the lab is built, as we get deeper into the lab you will learn about the different kinds of injection-based attacks, achieve the attack and then block the attack using BIG-IP AWAF.
+
+.. image:: ../images/Attacks/Picture1.png
 
 .. toctree::
    :maxdepth: 1
