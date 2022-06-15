@@ -10,7 +10,7 @@ The Diagram above shows how the lab is built, as we get deeper into the lab you 
 .. image:: images/Prereqs/Picture1.png
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
    module*/module*
