@@ -1,22 +1,16 @@
-F5 Agility Labs Getting Started Doc
+F5 Security Automation with Ansible
 ===================================
 
-Welcome to the |classbold| for F5 Agility |year|
+Demonstrating Ansible Security Automation with F5 LTM + WAF
+***********************************************************
 
-.. attention::
-   The Agility team is using this repo to document our "read-the-docs" process.
+This Lab will go over the benefits of using F5 Advanced Web Application Firewall (AWAF) by providing scenarios of injection-based attacks and ways to solve by using Ansible Automation and ELK Monitoring.  
+The Diagram above shows how the lab is built, as we get deeper into the lab you will learn about the different kinds of injection-based attacks, achieve the attack and then block the attack using BIG-IP AWAF.
 
-|repoinfo|
-
-.. note::
-   Each Agility lab is typically broken down by "Class" --> "Module" --> "Lab".
-   Each section uses "toctree" to create the index and reference the content.
-   Using this template should give the contributer several getting-started
-   RST examples.
+.. image:: images/Prereqs/Picture1.png
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Contents:
+   :maxdepth: 1
    :glob:
 
-   class*/class*
+   module*/module*
