@@ -11,7 +11,7 @@ After modifying the WAF policy from transparent to blocking the F5 BIG-IP should
      In the DVWA Website in the XRDP Session
      .. code-block::
 
-       8.8.8.8 | cat /etc/password
+       8.8.8.8 | cat /etc/passwd
 
      .. image:: ../images/WAF/Picture9.png
           :width: 850
