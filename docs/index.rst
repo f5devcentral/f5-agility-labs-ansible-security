@@ -8,6 +8,7 @@ This Lab will go over the benefits of using F5 Advanced Web Application Firewall
 The Diagram above shows how the lab is built, as we get deeper into the lab you will learn about the different kinds of injection-based attacks, achieve the attack and then block the attack using BIG-IP AWAF.
 
 .. image:: images/Prereqs/Picture1.png
+   :width: 800
 
 .. toctree::
    :maxdepth: 2
