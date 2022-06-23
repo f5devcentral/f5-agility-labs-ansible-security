@@ -185,9 +185,8 @@ html_theme_options = {
     "site_name": "Community Training Classes & Labs",
     "next_prev_link": True
 }
-
+html_codeblock_linenos_style = 'table'
 html_context = {"github_url": github_repo}
-
 html_last_updated_fmt = "%Y-%m-%d %H:%M:%S"
 
 extlinks = {"issues": (("%s/issues/%%s" % github_repo), "issue ")}
